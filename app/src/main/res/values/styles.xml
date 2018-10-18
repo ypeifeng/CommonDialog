@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--dialog基类-->
+    <style name="BaseDialogStyle" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!-- 无边框 -->
+        <item name="android:windowIsFloating">true</item><!-- 是否浮现在activity之上,必须设为true-->
+        <item name="android:windowNoTitle">true</item><!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item><!-- 背景透明 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+    
+    <!--正常dialog-->
+    <style name="DialogStyle" parent="BaseDialogStyle">
+        <item name="android:windowContentOverlay">@null</item><!-- 对话框是否有遮盖 -->
+        <item name="android:backgroundDimEnabled">true</item><!-- 模糊 -->
+        <item name="android:windowIsTranslucent">true</item> <!-- 半透明 -->
+    </style>
+
+    <!-- 自定义分割线_窄 -->
+    <style name="DividerThin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/x1</item>
+        <item name="android:layout_marginLeft">@dimen/x9</item>
+        <item name="android:layout_marginRight">@dimen/x9</item>
+        <item name="android:background">@color/gray</item>
+    </style>
+
+    <!-- 通用dialog -->
+    <style name="CommonDialog">
+        <item name="android:background">@drawable/dialog_common</item>
+    </style>
+
+
+</resources>
